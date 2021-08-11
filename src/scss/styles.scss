@@ -1,0 +1,36 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700");
+@import "reset";
+@import "grid";
+
+body {
+  font-size: 16px;
+  background-image: url("https://images.pexels.com/photos/326311/pexels-photo-326311.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
+}
+
+.NavBar {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  background-color: #f0f0f0;
+}
+
+.HomePage {
+  color: white;
+
+}
+
+.AboutPage {
+
+}
+
+.ContactPage{
+
+}
+
+.AppPage {
+
+}
+
+.ShowPage{
+  color: white;
+}

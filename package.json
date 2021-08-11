@@ -3,6 +3,7 @@
     "node": "14.x"
   },
   "name": "big-poppa-code-react-starter-kit",
+  "homepage": "https://bookmarks-santos.herokuapp.com/home",
   "version": "0.1.0",
   "description": "A way for people to start a react project and not be locked into create react app",
   "main": "server.js",

@@ -44,7 +44,7 @@ export default function Home(props) {
 						return (
 							<li key={bookmark._id} className="flx-md-row">
 								<a
-									href={`/home`}
+									href={`/`}
 									onClick={() => window.open(bookmark.link, '_blank')}
 								>
 									<h3>{bookmark.title}</h3>

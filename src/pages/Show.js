@@ -32,6 +32,10 @@ export default function Show(props) {
 		(async () => {
 			try {
 				const response = await fetch(`/api/bookmarks/${props.match.params.id}`);
+				console.log(response);
+				if (response.status !== 200) {
+					window.location.assign('/');
+				}
 				const data = await response.json();
 				setBookmark(data);
 			} catch (error) {
@@ -52,7 +56,7 @@ export default function Show(props) {
 		} catch (error) {
 			console.error(error);
 		} finally {
-			window.location.assign('/home');
+			window.location.assign('/');
 		}
 	};
 

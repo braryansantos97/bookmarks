@@ -14,7 +14,7 @@ export default function Show(props) {
 					'Content-Type': 'application/json'
 				},
 				body: JSON.stringify({
-					name: titleInput.current.value,
+					title: titleInput.current.value,
 					link: linkInput.current.value
 				})
 			});

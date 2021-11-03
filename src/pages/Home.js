@@ -34,36 +34,42 @@ export default function Home(props) {
 		}
 	};
 
+	const element = bookmarks.map(bookmark => {
+		return (
+			<div className="box col mb-3 has-background-primary" key={bookmark._id}>
+				<div className="">
+					<a
+						className="title is-3"
+						href={`/`}
+						onClick={() => window.open(bookmark.link, '_blank')}
+					>
+						<h3 style={{ color: 'black' }}>{bookmark.title}</h3>
+					</a>
+					<Link to={`/${bookmark._id}`}>
+						<button className="button is-info">
+							<i className="fas fa-edit" />
+						</button>
+					</Link>
+					<button
+						className="button is-danger"
+						onClick={() => {
+							handleDelete(bookmark._id);
+						}}
+					>
+						X
+					</button>
+				</div>
+			</div>
+		);
+	});
+
 	return (
 		<div className="HomePage container text-center">
-			<h1>📚My Bookmarks📚</h1>
 			<Create bookmarks={bookmarks} setBookmarks={setBookmarks} />
-			<div className="">
-				<ul className="">
-					{bookmarks.map(bookmark => {
-						return (
-							<li key={bookmark._id} className="flx-md-row">
-								<a
-									href={`/`}
-									onClick={() => window.open(bookmark.link, '_blank')}
-								>
-									<h3>{bookmark.title}</h3>
-								</a>
-								<Link to={`/${bookmark._id}`}>
-									<button className="btn btn-primary">Edit Bookmark</button>
-								</Link>
-								<button
-									className="btn btn-danger"
-									onClick={() => {
-										handleDelete(bookmark._id);
-									}}
-								>
-									X
-								</button>
-							</li>
-						);
-					})}
-				</ul>
+			<div className="container">
+				<div className="table-responsive-xl row row-cols-1 row-cols-md-4 g-4">
+					{element}
+				</div>
 			</div>
 		</div>
 	);

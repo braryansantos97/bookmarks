@@ -8,6 +8,7 @@ const AppRouter = () => {
 	return (
 		<Router>
 			<NavBar routes={routes} />
+			<h1>📚My Bookmarks📚</h1>
 			<Switch>
 				{routes.map(({ Component, key, path }) => (
 					<Route

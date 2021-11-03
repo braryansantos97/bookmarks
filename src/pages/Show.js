@@ -75,34 +75,37 @@ export default function Show(props) {
 			) : (
 				<h1>Loading ...</h1>
 			)}
-			<form
-				style={{ display: 'flex', flexDirection: 'column' }}
-				onSubmit={handleUpdate}
-			>
-				<label>
-					{' '}
-					Website Name:{' '}
-					<input
-						className="form-control"
-						type="text"
-						ref={titleInput}
-						defaultValue={bookmark.title}
-					/>
-				</label>
-				<label>
-					{' '}
-					http:// Link:{' '}
-					<input
-						className="form-control"
-						type="text"
-						ref={linkInput}
-						defaultValue={bookmark.link}
-					/>
-				</label>
-				<button className="btn btn-primary">Update Bookmark</button>
-			</form>
+			<div className="columns is-desktop is-centered">
+				<form
+					className="column box has-background-primary is-4"
+					style={{ display: 'flex', flexDirection: 'column' }}
+					onSubmit={handleUpdate}
+				>
+					<label>
+						{' '}
+						Website Name:{' '}
+						<input
+							className="form-control"
+							type="text"
+							ref={titleInput}
+							defaultValue={bookmark.title}
+						/>
+					</label>
+					<label>
+						{' '}
+						http:// Link:{' '}
+						<input
+							className="form-control"
+							type="text"
+							ref={linkInput}
+							defaultValue={bookmark.link}
+						/>
+					</label>
+					<button className="button is-info">Update Bookmark</button>
+				</form>
+			</div>
 			<br />
-			<button className="btn btn-danger" onClick={handleDelete}>
+			<button className="button is-danger" onClick={handleDelete}>
 				Delete Bookmark
 			</button>
 		</div>

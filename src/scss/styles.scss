@@ -2,9 +2,19 @@
 @import "reset";
 @import "grid";
 
+@import url('https://fonts.googleapis.com/css2?family=Rampart+One&display=swap');
+
+h1 {
+    font-family: 'Rampart One', cursive;
+    text-align: center;
+}
+
+h3 {
+    font-family: 'Rampart One', cursive;
+}
+
 body {
   font-size: 16px;
-  background-image: url("https://images.pexels.com/photos/326311/pexels-photo-326311.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
 }
 
 .NavBar {
@@ -32,5 +42,4 @@ body {
 }
 
 .ShowPage{
-  color: white;
 }

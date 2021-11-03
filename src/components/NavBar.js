@@ -4,13 +4,6 @@ import { Link } from 'react-router-dom';
 const NavBar = props => {
 	return (
 		<div>
-			<nav className="NavBar navbar-dark bg-dark">
-				{props.routes.map(({ key, path }) => (
-					<Link className="" key={key} to={path}>
-						{key}
-					</Link>
-				))}
-			</nav>
 			<nav
 				className="navbar is-info"
 				role="navigation"
@@ -41,37 +34,23 @@ const NavBar = props => {
 
 				<div id="navbarBasicExample" className="navbar-menu">
 					<div className="navbar-start">
-						<Link className="navbar-item" to="/">
-							Home
-						</Link>
-
-						<div className="navbar-item has-dropdown is-hoverable">
-							<Link className="navbar-link" to="/">
-								More
+						{props.routes.map(({ key, path }) => (
+							<Link className="navbar-item" key={key} to={path}>
+								{key}
 							</Link>
-
-							<div className="navbar-dropdown">
-								<Link className="navbar-item" to="/">
-									About
-								</Link>
-								<Link className="navbar-item" to="/">
-									Contact
-								</Link>
-								<hr className="navbar-divider" />
-							</div>
-						</div>
+						))}
 					</div>
 
 					<div className="navbar-end">
 						<div className="navbar-item">
-							<div className="buttons">
+							{/*<div className="buttons">
 								<Link className="button is-primary" to="/">
 									<strong>Sign up</strong>
 								</Link>
 								<Link className="button is-light" to="/">
 									Log in
 								</Link>
-							</div>
+							</div>*/}
 						</div>
 					</div>
 				</div>

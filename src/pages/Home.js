@@ -66,10 +66,8 @@ export default function Home(props) {
 	return (
 		<div className="HomePage container text-center">
 			<Create bookmarks={bookmarks} setBookmarks={setBookmarks} />
-			<div className="container">
-				<div className="table-responsive-xl row row-cols-1 row-cols-md-4 g-4">
-					{element}
-				</div>
+			<div className="container overflow-scroll">
+				<div className="row row-cols-1 row-cols-md-4 g-4">{element}</div>
 			</div>
 		</div>
 	);

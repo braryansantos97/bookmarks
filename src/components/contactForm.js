@@ -46,11 +46,7 @@ export default function ContactMe() {
 			<div className="">
 				<label>Message</label>
 				<textarea name="message" className="textarea mb-3" />
-				<input
-					type="submit"
-					value="Send"
-					className="button is-info text-center"
-				/>
+				<input type="submit" value="Send" className="button is-info" />
 				<div className="row">{result ? <Result /> : null}</div>
 			</div>
 		</form>
